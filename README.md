@@ -1,1 +1,3 @@
-"# Fanana\n\nPick the most bananas. Win the SOL.\n\n## Run\n\nnpm install\nnode server.js  # terminal 1\nnpm run dev     # terminal 2"
+# Fanana
+
+P2P PvP banana-picking game on Solana. Join a lobby, wager SOL, pick more bananas, win.
