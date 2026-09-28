@@ -1,0 +1,312 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Landing */
+.landing {
+  text-align: center;
+}
+
+.landing h1 {
+  font-size: 4em;
+  margin-bottom: 10px;
+  color: #ffd700;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.landing p {
+  font-size: 1.2em;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.connect-btn {
+  background: #9945FF;
+  color: white;
+  font-size: 20px;
+  padding: 16px 40px;
+}
+
+.connect-btn:hover {
+  background: #7b2ff7;
+}
+
+.wallet-info {
+  background: rgba(0,0,0,0.4);
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Lobby */
+.lobby {
+  text-align: center;
+  background: rgba(0,0,0,0.3);
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.lobby h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.wager-options {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.wager-btn {
+  background: #2d5a2d;
+  color: #fff;
+  padding: 14px 24px;
+  font-size: 16px;
+}
+
+.wager-btn.selected {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+}
+
+.wager-btn:hover {
+  background: #3d7a3d;
+}
+
+.wager-btn.selected:hover {
+  background: #ffea00;
+}
+
+.custom-wager {
+  margin: 15px 0;
+}
+
+.custom-wager input {
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #fff;
+  width: 150px;
+}
+
+.join-btn {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.join-btn:hover {
+  background: #ffea00;
+}
+
+.matching {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #8f8;
+}
+
+/* Game */
+.game-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-header {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 100;
+}
+
+.game-header .timer {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.game-header .score {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.game-area {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.tree {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 350px;
+}
+
+.tree-left {
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.tree-right {
+  left: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.tree-trunk {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 120px;
+  background: linear-gradient(to right, #5d3a1a, #8b5e3c, #5d3a1a);
+  border-radius: 4px;
+}
+
+.tree-crown {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 250px;
+  background: radial-gradient(ellipse, #2d8a2d, #1a5a1a);
+  border-radius: 50%;
+}
+
+.banana {
+  position: absolute;
+  font-size: 28px;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.1s;
+  z-index: 10;
+}
+
+.banana:hover {
+  transform: scale(1.3);
+}
+
+.banana.dragging {
+  cursor: grabbing;
+  transform: scale(1.4);
+  z-index: 1000;
+  position: fixed;
+}
+
+.basket {
+  position: absolute;
+  bottom: 20px;
+  width: 120px;
+  height: 80px;
+  border: 3px dashed #8b5e3c;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  background: rgba(139, 94, 60, 0.2);
+}
+
+.basket-left {
+  left: 20px;
+}
+
+.basket-right {
+  right: 20px;
+}
+
+.basket.highlight {
+  border-color: #ffd700;
+  background: rgba(255, 215, 0, 0.15);
+}
+
+.basket-count {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.warmup-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.warmup-overlay h2 {
+  font-size: 3em;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+
+.warmup-overlay p {
+  font-size: 1.3em;
+  color: #ccc;
+}
+
+.game-over-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.game-over-overlay h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.game-over-overlay .winner {
+  color: #ffd700;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.game-over-overlay .scores {
+  font-size: 1.3em;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.return-btn {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.return-btn:hover {
+  background: #ffea00;
+}   
